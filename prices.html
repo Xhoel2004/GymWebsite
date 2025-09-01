@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Remixicon (optional for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/prices.css" />
+
+    <title>Fitness Website</title>
+</head>
+<body>
+     <div id="navbar-placeholder"></div>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Choose Your Plan</h1>
+    <p>Flexible memberships designed for your lifestyle</p>
+  </section>
+
+  <!-- Membership Plans -->
+  <section id="plans" class="container">
+    <h2>Membership Plans</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <h3>Basic</h3>
+          <h4>$29 / month</h4>
+          <p>✔ Gym Access</p>
+          <p>✔ Locker Room</p>
+          <p>✔ Free Wi-Fi</p>
+          <a href="contact.html" class="btn btn-outline-light mt-3">Join Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <h3>Standard</h3>
+          <h4>$49 / month</h4>
+          <p>✔ Gym Access</p>
+          <p>✔ Locker Room</p>
+          <p>✔ Free Wi-Fi</p>
+          <p>✔ Group Classes</p>
+          <a href="contact.html" class="btn btn-outline-light mt-3">Join Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <h3>Premium</h3>
+          <h4>$79 / month</h4>
+          <p>✔ All Standard Benefits</p>
+          <p>✔ Personal Trainer</p>
+          <p>✔ Nutrition Guidance</p>
+          <p>✔ Sauna & Spa Access</p>
+          <a href="contact.html" class="btn btn-outline-light mt-3">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Members Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <blockquote>"This gym completely changed my life! Amazing trainers and great atmosphere."</blockquote>
+          <footer>- Sarah M.</footer>
+        </div>
+        <div class="carousel-item">
+          <blockquote>"The premium plan is worth every penny. The nutrition coaching was a game changer."</blockquote>
+          <footer>- David K.</footer>
+        </div>
+        <div class="carousel-item">
+          <blockquote>"Super clean, friendly staff, and the best equipment in town!"</blockquote>
+          <footer>- Laura P.</footer>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+<section class="faq-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      
+      <!-- Question 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+            Can I cancel anytime?
+          </button>
+        </h2>
+        <div id="answer1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes! You can cancel or upgrade your plan anytime with no hidden fees.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+            Do you offer a free trial?
+          </button>
+        </h2>
+        <div id="answer2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, we offer a 7-day free trial for all new members.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3">
+            Are trainers certified?
+          </button>
+        </h2>
+        <div id="answer3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely! All our trainers are fully certified and experienced professionals.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Start Your Fitness Journey?</h2>
+    <p>Choose the plan that works best for you and join us today!</p>
+    <a href="#" class="btn btn-dark mt-3">Join Today</a>
+  </section>
+
+
+       <script>
+  fetch("header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("navbar-placeholder").innerHTML = html;
+      setActiveNav(); // ✅ run AFTER navbar is in the DOM
+    });
+      function setActiveNav() {
+    // current file name, default to index.html
+    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+
+    document.querySelectorAll("#navbarNav .nav-link").forEach(a => {
+      // compare by file name only (ignores folders, query, hash)
+      const hrefFile = (a.getAttribute("href") || "").split("/").pop().toLowerCase();
+      if (hrefFile === current || (hrefFile === "index.html" && current === "")) {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      } else {
+        a.classList.remove("active");
+        a.removeAttribute("aria-current");
+      }
+    });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

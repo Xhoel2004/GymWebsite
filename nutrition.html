@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Remixicon (optional for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/nutrition.css" />
+
+    <title>Fitness Website</title>
+</head>
+<body>
+     <div id="navbar-placeholder"></div>
+
+    
+  <!-- Hero -->
+  <section class="hero-nutrition">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Fuel Your Body, Fuel Your Goals</h1>
+      <p>Discover personalized meal plans, healthy recipes, and nutrition tips</p>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="container py-5">
+    <h2 class="section-title mb-4">Nutrition Categories</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="nutrition-card text-center p-3">
+          <i class="ri-scales-2-line icon-lg"></i>
+          <h4>Weight Loss</h4>
+          <p>Calorie deficit, portion control, balanced eating for fat loss.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="nutrition-card text-center p-3">
+          <i class="ri-bar-chart-box-line icon-lg"></i>
+          <h4>Muscle Gain</h4>
+          <p>High-protein meals, clean bulking, optimal macros.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="nutrition-card text-center p-3">
+          <i class="ri-leaf-line icon-lg"></i>
+          <h4>Vegan / Vegetarian</h4>
+          <p>Plant-based, protein-rich meals for sustainable health.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="nutrition-card text-center p-3">
+          <i class="ri-fire-line icon-lg"></i>
+          <h4>Keto / Low Carb</h4>
+          <p>Low carb, high fat nutrition for fat-burning & energy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Meal Plans -->
+  <section class="container py-5">
+    <h2 class="section-title mb-4">Sample Meal Plans</h2>
+    <div class="accordion" id="mealPlans">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#plan1">Weight Loss – 1800 Calories</button>
+        </h2>
+        <div id="plan1" class="accordion-collapse collapse" data-bs-parent="#mealPlans">
+          <div class="accordion-body">
+            <ul>
+              <li><b>Breakfast:</b> Oats + berries + protein powder</li>
+              <li><b>Lunch:</b> Grilled chicken + quinoa + veggies</li>
+              <li><b>Dinner:</b> Salmon + sweet potato + broccoli</li>
+              <li><b>Snacks:</b> Greek yogurt, almonds</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#plan2">Muscle Gain – 2800 Calories</button>
+        </h2>
+        <div id="plan2" class="accordion-collapse collapse" data-bs-parent="#mealPlans">
+          <div class="accordion-body">
+            <ul>
+              <li><b>Breakfast:</b> Eggs + toast + avocado</li>
+              <li><b>Lunch:</b> Beef + rice + spinach</li>
+              <li><b>Dinner:</b> Chicken pasta + salad</li>
+              <li><b>Snacks:</b> Protein shake, peanut butter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes -->
+  <section class="container py-5">
+    <h2 class="section-title mb-4">Healthy Recipes</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="recipe-card">
+          <img src="images/recepi-1.webp" alt="Salad">
+          <div class="p-3">
+            <h5>Quinoa Avocado Salad</h5>
+            <p>350 cal • 15g protein • 40g carbs • 15g fat</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="recipe-card">
+          <img src="images/recepi-2.jpg" alt="Smoothie">
+          <div class="p-3">
+            <h5>Berry Protein Smoothie</h5>
+            <p>250 cal • 20g protein • 30g carbs • 5g fat</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="recipe-card">
+          <img src="images/recepi-3.jpeg" alt="Chicken meal">
+          <div class="p-3">
+            <h5>Grilled Chicken Bowl</h5>
+            <p>500 cal • 40g protein • 50g carbs • 12g fat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section class="container py-5">
+    <h2 class="section-title mb-4">Nutrition Tips</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="tip-card p-3">
+          <i class="ri-drop-line icon-lg"></i>
+          <h5>Stay Hydrated</h5>
+          <p>Drink at least 2–3 liters of water daily to optimize performance.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="tip-card p-3">
+          <i class="ri-time-line icon-lg"></i>
+          <h5>Meal Prep</h5>
+          <p>Plan and cook your meals ahead to avoid unhealthy choices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+       <script>
+  fetch("header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("navbar-placeholder").innerHTML = html;
+      setActiveNav(); // ✅ run AFTER navbar is in the DOM
+    });
+      function setActiveNav() {
+    // current file name, default to index.html
+    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+
+    document.querySelectorAll("#navbarNav .nav-link").forEach(a => {
+      // compare by file name only (ignores folders, query, hash)
+      const hrefFile = (a.getAttribute("href") || "").split("/").pop().toLowerCase();
+      if (hrefFile === current || (hrefFile === "index.html" && current === "")) {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      } else {
+        a.classList.remove("active");
+        a.removeAttribute("aria-current");
+      }
+    });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

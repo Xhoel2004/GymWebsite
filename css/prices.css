@@ -1,0 +1,154 @@
+:root {
+  --dark: #222831;
+  --grey: #393E46;
+  --cyan: #00ADB5;
+  --light: #EEEEEE;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/gym-hero.jpg') no-repeat center center/cover;
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    /* Membership Plans */
+    #plans {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    #plans h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    #plans h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--cyan);
+      margin: 0.5rem auto 0;
+      border-radius: 3px;
+    }
+    .card {
+      background: var(--dark);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 15px;
+      color: var(--light);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: var(--cyan);
+      box-shadow: 0 10px 25px rgba(0, 173, 181, 0.4);
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    .card h4 {
+      color: var(--cyan);
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    /* Testimonials */
+    #testimonials {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: var(--grey);
+    }
+    #testimonials h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+    }
+   #testimonials blockquote {
+      max-width: 650px;
+      margin: auto;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #ccc;
+      text-align: center;
+    }
+    footer {
+      margin-top: 0.8rem;
+      font-weight: bold;
+      color: var(--cyan);
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(80%) sepia(20%) saturate(300%) hue-rotate(160deg); 
+    }
+
+    /* FAQ */
+.faq-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.accordion-item {
+  background-color: var(--grey);
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.accordion-button {
+  background-color: var(--grey);
+  color: var(--light);
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--cyan);
+  color: var(--dark);
+}
+
+.accordion-body {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+
+    /* CTA Bar */
+    .cta {
+      background: var(--cyan);
+      padding: 3rem 2rem;
+      text-align: center;
+      color: var(--dark);
+    }
+    .cta h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cta .btn-dark {
+      border-radius: 30px;
+      padding: 0.8rem 2rem;
+      font-weight: bold;
+    }

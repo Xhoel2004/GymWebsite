@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Remixicon (optional for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Fitness Website</title>
+</head>
+
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Your fitness journey starts here !</h1>
+      <p>Join our programms and see results yourself</p>
+      <a href="#" class="btn">View programms</a>
+      <a href="#" class="btn">Start Tracking</a>
+    </div>
+  </section>
+
+
+
+  <section class="workout-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Workout Plans</h2>
+
+      <div class="row g-4">
+        <!-- Strength Card -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/strength.png" class="card-img-top" alt="Strength Training">
+            <div class="card-body text-center">
+              <h5 class="card-title">Strength Training</h5>
+              <p class="card-text">Build muscle and increase power with structured strength workouts.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#strengthModal">View Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cardio Card -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/cardio-workout.png" class="card-img-top" alt="Cardio">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cardio</h5>
+              <p class="card-text">Improve endurance, burn fat, and boost your heart health.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cardioModal">View Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yoga Card -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/yoga.png" class="card-img-top" alt="Yoga">
+            <div class="card-body text-center">
+              <h5 class="card-title">Yoga</h5>
+              <p class="card-text">Enhance flexibility, balance, and mental clarity with yoga sessions.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#yogaModal">View Plan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Strength Modal -->
+  <div class="modal fade" id="strengthModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title">Strength Training Plan</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Day 1: Chest & Triceps</li>
+            <li>Day 2: Back & Biceps</li>
+            <li>Day 3: Legs & Shoulders</li>
+            <li>Day 4: Rest & Recovery</li>   
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cardio Modal -->
+  <div class="modal fade" id="cardioModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title">Cardio Plan</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Day 1: HIIT (20 minutes)</li>
+            <li>Day 2: Jogging (30 minutes)</li>
+            <li>Day 3: Cycling (40 minutes)</li>
+            <li>Day 4: Rest</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Yoga Modal -->
+  <div class="modal fade" id="yogaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title">Yoga Plan</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Day 1: Sun Salutations</li>
+            <li>Day 2: Power Yoga</li>
+            <li>Day 3: Yin Yoga (deep stretches)</li>
+            <li>Day 4: Meditation & Breathing</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!--Nutrition section-->
+  <section class="nutrition-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Nutrition Tips</h2>
+
+      <!-- Accordion -->
+      <div class="accordion mb-5" id="nutritionAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tipOne"
+              aria-expanded="true" aria-controls="tipOne">
+              Eat More Whole Foods
+            </button>
+          </h2>
+          <div id="tipOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#nutritionAccordion">
+            <div class="accordion-body">
+              Focus on fruits, vegetables, whole grains, and lean proteins. These provide essential nutrients and keep
+              you full longer.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipTwo"
+              aria-expanded="false" aria-controls="tipTwo">
+              Stay Hydrated
+            </button>
+          </h2>
+          <div id="tipTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#nutritionAccordion">
+            <div class="accordion-body">
+              Drinking enough water improves energy levels, supports metabolism, and aids recovery after workouts.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#tipThree" aria-expanded="false" aria-controls="tipThree">
+              Balance Your Macros
+            </button>
+          </h2>
+          <div id="tipThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#nutritionAccordion">
+            <div class="accordion-body">
+              Balance protein, carbs, and healthy fats to fuel workouts and support muscle growth while maintaining
+              energy.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <h3 class="text-center mb-3">Recommended Daily Calorie Intake</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Goal</th>
+              <th>Calories (Men)</th>
+              <th>Calories (Women)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Weight Loss</td>
+              <td>1,800 - 2,200</td>
+              <td>1,400 - 1,800</td>
+            </tr>
+            <tr>
+              <td>Maintenance</td>
+              <td>2,400 - 2,800</td>
+              <td>1,800 - 2,200</td>
+            </tr>
+            <tr>
+              <td>Muscle Gain</td>
+              <td>2,800 - 3,200+</td>
+              <td>2,200 - 2,600+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!--progress section-->
+  <section class="progress-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Progress Tracker</h2>
+
+      <div class="row g-4">
+        <!-- Weight Loss -->
+        <div class="col-md-4">
+          <div class="card shadow-sm p-4 text-center">
+            <h5 class="mb-3">Weight Loss Progress</h5>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                aria-valuemin="0" aria-valuemax="100">60%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Water Intake -->
+        <div class="col-md-4">
+          <div class="card shadow-sm p-4 text-center">
+            <h5 class="mb-3">Water Intake</h5>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                aria-valuemin="0" aria-valuemax="100">80%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workout Streak -->
+        <div class="col-md-4">
+          <div class="card shadow-sm p-4 text-center">
+            <h5 class="mb-3">Workout Streak</h5>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar bg-warning text-dark" role="progressbar" style="width: 40%;" aria-valuenow="40"
+                aria-valuemin="0" aria-valuemax="100">40%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--teestimonials-->
+  <section class="testimonials-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Testimonials & Success Stories</h2>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active text-center">
+            <div class="testimonial-card mx-auto p-4 shadow rounded">
+              <blockquote class="blockquote mb-3">
+                <p>"I lost 15kg in 3 months following these workout and nutrition plans!"</p>
+              </blockquote>
+              <footer class="blockquote-footer">Anna, 28</footer>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="carousel-item text-center">
+            <div class="testimonial-card mx-auto p-4 shadow rounded">
+              <blockquote class="blockquote mb-3">
+                <p>"The program kept me motivated, and I gained the strength I always wanted."</p>
+              </blockquote>
+              <footer class="blockquote-footer">Mark, 32</footer>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="carousel-item text-center">
+            <div class="testimonial-card mx-auto p-4 shadow rounded">
+              <blockquote class="blockquote mb-3">
+                <p>"I feel more energetic, confident, and healthy than ever!"</p>
+              </blockquote>
+              <footer class="blockquote-footer">Sophia, 25</footer>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Contact-->
+  <section class="contact-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact & Subscribe</h2>
+      <p class="text-center mb-5">Sign up for our newsletter or book a personal trainer session today!</p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form class="p-4 shadow rounded bg-white">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="service" class="form-label">I am interested in</label>
+              <select id="service" class="form-select" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="newsletter">Newsletter Subscription</option>
+                <option value="trainer">Personal Trainer Session</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message (optional)</label>
+              <textarea id="message" rows="4" class="form-control"
+                placeholder="Write your goals or questions..."></textarea>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
+
+</body>
+
+</html>

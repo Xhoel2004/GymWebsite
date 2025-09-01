@@ -1,0 +1,186 @@
+/* Fonts:
+   Headings → Montserrat (bold & strong)
+   Paragraphs → Open Sans (clean & readable)
+*/
+
+/* Colors (gym/fitness palette):
+   Dark background: #0D0D0D (blackish)
+   Accent red: #E63946
+   Vibrant yellow: #FFB703
+   Cool gray: #F1FAEE
+*/
+
+:root {
+  --dark: #222831;
+  --grey: #393E46;
+  --cyan: #00ADB5;
+  --light: #EEEEEE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+.features {
+  background-color: var(--grey);
+}
+
+.btn {
+  background: var(--cyan);
+  color: var(--light);
+}
+
+.btn:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+
+
+/* Hero Workout Banner */
+.hero-workout {
+  position: relative;
+  height: 50vh; /* smaller than homepage */
+  background: url('../images/workout-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light);
+}
+
+.hero-workout .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65); /* dark shade for text readability */
+}
+
+.hero-workout-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-workout-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: var(--cyan); /* Accent color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-workout-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--light);
+  margin-bottom: 20px;
+}
+
+.hero-workout-content .btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-workout-content .btn-primary {
+  background: var(--cyan);
+  color: var(--light);
+  border: none;
+}
+
+.hero-workout-content .btn-primary:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+
+
+/* Section headers */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+/* Carousel category card */
+.category-card {
+  background: var(--grey);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.category-img {
+  width: 40%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.category-body {
+  padding: 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.btn-cyan {
+  background: var(--cyan);
+  color: var(--dark);
+  font-weight: 700;
+  border: none;
+}
+.btn-cyan:hover { filter: brightness(1.05); }
+
+/* Make card stack nicely on mobile */
+@media (max-width: 768px) {
+  .category-card { flex-direction: column; }
+  .category-img { width: 100%; height: 220px; }
+}
+
+/* Tabs & accordion tweaks to match theme */
+.nav-tabs .nav-link {
+  color: var(--light);
+  border: none;
+  background: transparent;
+}
+.nav-tabs .nav-link.active {
+  background: var(--grey);
+  color: var(--light);
+  border-radius: 12px 12px 0 0;
+}
+.accordion-item {
+  background: #2b2f38;
+  color: var(--light);
+  border: 1px solid #3a3f48;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: .75rem;
+}
+.accordion-button {
+  background: transparent;
+  color: var(--light);
+}
+.accordion-button:not(.collapsed) {
+  background: #333846;
+  color: var(--light);
+}
+.accordion-button:focus { box-shadow: none; }
+
+/* Modal */
+.modal-content { border-radius: 16px; }
