@@ -79,12 +79,50 @@ body {
   object-fit: cover;
 }
 
+.recipe-card button {
+  display: block;
+  margin: 10px auto; 
+}
+
 .recipe-card:hover { transform: translateY(-5px); }
 .icon-lg {
   font-size: 2rem;
   color: var(--cyan);
   margin-bottom: .5rem;
 }
+
+
+.modal-content {
+  background-color: #222831; 
+  color: #EEEEEE;           
+  border-radius: 10px;
+  border: 1px solid #393E46;
+}
+
+
+.modal-header {
+  border-bottom: 1px solid #393E46;
+}
+
+.modal-title {
+  color: #00ADB5; 
+}
+
+
+.modal-body {
+  color: #EEEEEE;
+}
+
+
+.modal-footer {
+  border-top: 1px solid #393E46;
+}
+
+
+.btn-close {
+  filter: invert(1); 
+}
+
 
 /* Tips */
 .tip-card {

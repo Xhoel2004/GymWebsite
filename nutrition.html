@@ -15,13 +15,16 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
 
+        
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/nutrition.css" />
 
     <title>Fitness Website</title>
 </head>
 <body>
-     <div id="navbar-placeholder"></div>
+     <div id="navbar"></div>
 
     
   <!-- Hero -->
@@ -106,39 +109,122 @@
     </div>
   </section>
 
-  <!-- Recipes -->
-  <section class="container py-5">
-    <h2 class="section-title mb-4">Healthy Recipes</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="recipe-card">
-          <img src="images/recepi-1.webp" alt="Salad">
-          <div class="p-3">
-            <h5>Quinoa Avocado Salad</h5>
-            <p>350 cal • 15g protein • 40g carbs • 15g fat</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="recipe-card">
-          <img src="images/recepi-2.jpg" alt="Smoothie">
-          <div class="p-3">
-            <h5>Berry Protein Smoothie</h5>
-            <p>250 cal • 20g protein • 30g carbs • 5g fat</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="recipe-card">
-          <img src="images/recepi-3.jpeg" alt="Chicken meal">
-          <div class="p-3">
-            <h5>Grilled Chicken Bowl</h5>
-            <p>500 cal • 40g protein • 50g carbs • 12g fat</p>
-          </div>
+<!-- Recipes -->
+<section class="container py-5">
+  <h2 class="section-title mb-4">Healthy Recipes</h2>
+  <div class="row g-4">
+    
+    <!-- Recipe 1 -->
+    <div class="col-md-4">
+      <div class="recipe-card">
+        <img src="images/recepi-1.webp" alt="Salad">
+        <div class="p-3">
+          <h5>Quinoa Avocado Salad</h5>
+          <p>350 cal • 15g protein • 40g carbs • 15g fat</p>
+          <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#recipe1Modal">View Recipe</button>
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- Recipe 2 -->
+    <div class="col-md-4">
+      <div class="recipe-card">
+        <img src="images/recepi-2.jpg" alt="Smoothie">
+        <div class="p-3">
+          <h5>Berry Protein Smoothie</h5>
+          <p>250 cal • 20g protein • 30g carbs • 5g fat</p>
+          <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#recipe2Modal">View Recipe</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe 3 -->
+    <div class="col-md-4">
+      <div class="recipe-card">
+        <img src="images/recepi-3.jpeg" alt="Chicken meal">
+        <div class="p-3">
+          <h5>Grilled Chicken Bowl</h5>
+          <p>500 cal • 40g protein • 50g carbs • 12g fat</p>
+          <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#recipe3Modal">View Recipe</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= Modals ================= -->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="recipe1Modal" tabindex="-1" aria-labelledby="recipe1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recipe1Label">Quinoa Avocado Salad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>1 cup cooked quinoa</li>
+          <li>1 avocado, diced</li>
+          <li>1 cup cherry tomatoes</li>
+          <li>2 tbsp olive oil</li>
+          <li>Salt & pepper</li>
+        </ul>
+        <h6>Instructions:</h6>
+        <p>Mix quinoa, avocado, and tomatoes. Drizzle with olive oil, season with salt and pepper, and serve chilled.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="recipe2Modal" tabindex="-1" aria-labelledby="recipe2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recipe2Label">Berry Protein Smoothie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>1 cup mixed berries</li>
+          <li>1 scoop protein powder</li>
+          <li>1 cup almond milk</li>
+          <li>1 tbsp honey</li>
+        </ul>
+        <h6>Instructions:</h6>
+        <p>Blend all ingredients until smooth. Serve cold and enjoy as a refreshing post-workout drink.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="recipe3Modal" tabindex="-1" aria-labelledby="recipe3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recipe3Label">Grilled Chicken Bowl</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>200g grilled chicken breast</li>
+          <li>1 cup brown rice</li>
+          <li>1 cup steamed broccoli</li>
+          <li>2 tbsp teriyaki sauce</li>
+        </ul>
+        <h6>Instructions:</h6>
+        <p>Arrange rice, broccoli, and chicken in a bowl. Drizzle with teriyaki sauce and serve warm.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Tips -->
   <section class="container py-5">
@@ -163,36 +249,7 @@
 
 
 
-
-
-
-
-
-
-       <script>
-  fetch("header.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("navbar-placeholder").innerHTML = html;
-      setActiveNav(); // ✅ run AFTER navbar is in the DOM
-    });
-      function setActiveNav() {
-    // current file name, default to index.html
-    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-
-    document.querySelectorAll("#navbarNav .nav-link").forEach(a => {
-      // compare by file name only (ignores folders, query, hash)
-      const hrefFile = (a.getAttribute("href") || "").split("/").pop().toLowerCase();
-      if (hrefFile === current || (hrefFile === "index.html" && current === "")) {
-        a.classList.add("active");
-        a.setAttribute("aria-current", "page");
-      } else {
-        a.classList.remove("active");
-        a.removeAttribute("aria-current");
-      }
-    });
-  }
-</script>
+  
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="main.js"></script>

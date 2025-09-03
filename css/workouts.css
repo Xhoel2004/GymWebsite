@@ -1,14 +1,4 @@
-/* Fonts:
-   Headings → Montserrat (bold & strong)
-   Paragraphs → Open Sans (clean & readable)
-*/
 
-/* Colors (gym/fitness palette):
-   Dark background: #0D0D0D (blackish)
-   Accent red: #E63946
-   Vibrant yellow: #FFB703
-   Cool gray: #F1FAEE
-*/
 
 :root {
   --dark: #222831;
@@ -146,6 +136,30 @@ body {
   border: none;
 }
 .btn-cyan:hover { filter: brightness(1.05); }
+
+
+.accordion-item,
+.accordion-body {
+    background-color: #222831 !important;
+    color: #EEEEEE !important;
+}
+
+.accordion-button.collapsed {
+    background-color: #222831 !important;
+    color: #EEEEEE !important;
+}
+
+
+.accordion-button:not(.collapsed) {
+    background-color: #222831 !important;
+    color: #EEEEEE !important;
+}
+
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
 
 /* Make card stack nicely on mobile */
 @media (max-width: 768px) {

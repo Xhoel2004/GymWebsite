@@ -13,6 +13,9 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
 
+        
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/contact.css">
 
@@ -21,7 +24,7 @@
 
 <body>
 
-    <div id="navbar-placeholder"></div>
+    <div id="navbar"></div>
 
     <!-- Hero Section -->
     <section class="hero text-center py-5">
@@ -91,30 +94,7 @@
         <p class="mb-0">&copy; 2025 FitLife Gym | All Rights Reserved</p>
     </footer>
 
-    <script>
-        fetch("header.html")
-            .then(r => r.text())
-            .then(html => {
-                document.getElementById("navbar-placeholder").innerHTML = html;
-                setActiveNav(); // ✅ run AFTER navbar is in the DOM
-            });
-        function setActiveNav() {
-            // current file name, default to index.html
-            const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
-            document.querySelectorAll("#navbarNav .nav-link").forEach(a => {
-                // compare by file name only (ignores folders, query, hash)
-                const hrefFile = (a.getAttribute("href") || "").split("/").pop().toLowerCase();
-                if (hrefFile === current || (hrefFile === "index.html" && current === "")) {
-                    a.classList.add("active");
-                    a.setAttribute("aria-current", "page");
-                } else {
-                    a.classList.remove("active");
-                    a.removeAttribute("aria-current");
-                }
-            });
-        }
-    </script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>

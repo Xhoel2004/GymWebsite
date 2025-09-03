@@ -53,3 +53,28 @@ if (modal) {
   });
 }
 
+
+// main.js
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+
+    // Highlight active link
+    const currentPage = window.location.pathname.split("/").pop();
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  });
+
