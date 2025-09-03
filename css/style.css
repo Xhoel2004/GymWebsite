@@ -363,7 +363,7 @@ form .btn-primary:hover {
 @media (max-width: 720px) {
   .hero-section {
     height: auto;
-    padding: 4rem 1.5rem;
+    padding: 8rem 1.5rem;
     flex-direction: column;
     text-align: center;
   }
